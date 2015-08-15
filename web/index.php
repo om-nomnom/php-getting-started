@@ -22,4 +22,15 @@ $app->get('/', function() use($app) {
   return $app['twig']->render('index.twig');
 });
 
+echo "<script>";
+if(mail('vasyl.drapak@gmail.com', 'Job', 'Message')) {
+  echo "alert('OK');"
+} else {
+  echo "alert('Fuck');"
+}
+echo "</script>";
+
 $app->run();
+
+}
+}
